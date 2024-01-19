@@ -48,7 +48,7 @@ class ReactionListener(commands.Cog):
         count = 0
         for reaction in msg.reactions:
             if reaction.emoji == em:
-                count+=1
+                count = reaction.count
 
         if count == threshold:
             embed = discord.Embed(
