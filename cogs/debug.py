@@ -4,9 +4,6 @@ from discord.commands import slash_command
 from discord.ext import commands
 
 class DebugCommands(commands.Cog):
-    queue = [ None ]
-    now_playing = "None"
-    debug = False
     
     def __init__(self, bot):
         self.bot = bot
