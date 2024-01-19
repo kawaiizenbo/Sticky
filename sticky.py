@@ -9,6 +9,7 @@ description = """Zeeby Sticky Bot for IBM Personal Computer and compatibles."""
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
+intents.reactions = True
 
 bot = commands.Bot(description=description, intents=intents)
 

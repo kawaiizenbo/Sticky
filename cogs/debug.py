@@ -2,6 +2,7 @@ import discord, datetime, time, platform
 
 from discord.commands import slash_command
 from discord.ext import commands
+from config import cfg
 
 class DebugCommands(commands.Cog):
     
@@ -20,7 +21,7 @@ class DebugCommands(commands.Cog):
         """Get bot info."""
         uptime = str(datetime.timedelta(seconds=int(round(time.time()-startTime))))
         embed = discord.Embed(
-            color = 0x711f25,
+            color = cfg["guilds"][str(ctx.guild.id)]["colour"],
             title = "Bot info",
         )
         embed.set_author(name=self.bot.user, icon_url=self.bot.user.display_avatar)
@@ -33,12 +34,3 @@ class DebugCommands(commands.Cog):
         embed.add_field(name="Bot Source", value="https://github.com/kawaiizenbo/ZeebyStickyBot", inline=False)
         embed.set_thumbnail(url=self.bot.user.display_avatar)
         await ctx.respond(embed = embed, ephemeral=False)
-    
-    @slash_command(name="kill")
-    async def kill(self, ctx):
-        """Stop bot (bot owner only)"""
-        if not await self.bot.is_owner(ctx.author):
-            return await ctx.respond("No permission.", ephemeral=False)
-        
-        await ctx.respond("```\n * But there was nobody there...```")
-        exit(0)

@@ -4,19 +4,22 @@
         "YOUR_GUILD_ID":
         {
             "threshold": 2,
-            "emoji": "⭐",
+            "emoji": ":star:",
             "board_channel_id": 12345678901234567890,
+            "colour": 16498635,
             "channels": 
             {
                 "10101010101010101010": 
                 {
-                    "override_threshold": null,
-                    "override_board_channel_id": null
+                    "threshold": null,
+                    "emoji": null,
+                    "board_channel_id": null
                 },
                 "20202020202020202020": 
                 {
-                    "override_threshold": 1,
-                    "override_board_channel_id": 303030303030303030
+                    "threshold": 1,
+                    "emoji": ":pushpin:",
+                    "board_channel_id": 303030303030303030
                 }
             }
         }
