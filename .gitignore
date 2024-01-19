@@ -154,3 +154,5 @@ cython_debug/
 # StickyBot config files
 /token.txt
 /config.json
+
+/.DS_Store
