@@ -1,5 +1,5 @@
-# ZeebyStickyBot
-starboard/sticky discord bot 
+# Sticky
+starboard/pinboard discord bot 
 
 ## to use:
 install python 3 (tested on 3.12.1)  

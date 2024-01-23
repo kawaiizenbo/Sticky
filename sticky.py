@@ -4,7 +4,7 @@ from discord.ext import commands
 from cogs.debug import DebugCommands
 from cogs.reaction_listener import ReactionListener
 
-description = """Zeeby Sticky Bot for IBM Personal Computer and compatibles."""
+description = """Sticky, she is for IBM Personal Computer and compatibles."""
 
 intents = discord.Intents.default()
 intents.members = True
@@ -21,6 +21,6 @@ async def on_ready():
     print(f"Logged in as {bot.user} (ID: {bot.user.id})")
     print("------")
 
-print("ZeebyStickyBot init")
+print("Sticky init")
 
 bot.run(open("token.txt", "r").read())
